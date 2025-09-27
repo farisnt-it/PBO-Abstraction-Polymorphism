@@ -110,6 +110,29 @@ Jika pengguna memasukkan input non-angka untuk umur, program akan menampilkan pe
 <img width="729" height="379" alt="image" src="https://github.com/user-attachments/assets/44b9c96d-c1ad-458b-ae9e-65e80bf24c92" />
 
 
+# Program Koleksi Tanaman PBO Test 4
+
+Program ini adalah aplikasi konsol Java sederhana untuk mengelola koleksi tanaman. Program ini dirancang dengan menerapkan konsep Object-Oriented Programming (OOP) seperti Abstraksi dan Polimorfisme.
+
+## Penjelasan Penerapan OOP
+
+### Abstraction
+Program ini menerapkan **Abstraksi** melalui penggunaan **Abstract Class**.
+
+* **`abstract class TanamanModel`**: Kelas ini berfungsi sebagai fondasi untuk semua jenis tanaman. Kelas ini tidak dapat diinstansiasi secara langsung karena merepresentasikan konsep umum "tanaman".
+    * Method `tampilkanInfo()` dideklarasikan sebagai `abstract`, yang memaksa semua kelas turunannya (`TanamanHias` dan `TanamanBuah`) untuk menyediakan implementasi spesifik dari method ini.
+
+### Polymorphism
+Polymorphism diterapkan dalam program ini melalui **Method Overloading** dan **Method Overriding**.
+
+* **Overloading**: Ditemukan pada method `setUmur()` di dalam `abstract class TanamanModel`.
+    * `setUmur(int umur)`: Digunakan untuk mengubah umur tanaman dengan input angka.
+    * `setUmur(String umurStr)`: Digunakan untuk mengubah umur tanaman dengan input string. Method ini akan memproses input string dan mengonversinya menjadi angka secara aman.
+
+* **Overriding**: Ditemukan pada dua kelas turunan dari `TanamanModel`.
+    * **`tampilkanInfo()` di kelas `TanamanHias`**: Method ini meng-override `tampilkanInfo()` dari kelas induknya (`TanamanModel`). Implementasinya menambahkan detail spesifik tentang tanaman hias, yaitu `warnaBunga`.
+    * **`tampilkanInfo()` di kelas `TanamanBuah`**: Sama seperti `TanamanHias`, method ini meng-override method dari kelas induknya untuk menampilkan informasi yang unik untuk tanaman buah, yaitu `musimPanen`.
+
 
 
    
