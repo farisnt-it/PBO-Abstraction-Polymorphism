@@ -110,14 +110,16 @@ Jika pengguna memasukkan input non-angka untuk umur, program akan menampilkan pe
 <img width="729" height="379" alt="image" src="https://github.com/user-attachments/assets/44b9c96d-c1ad-458b-ae9e-65e80bf24c92" />
 
 
-# Program Koleksi Tanaman PBO Test 4
+# Program Koleksi Tanaman 
 
-Program ini adalah aplikasi konsol Java sederhana untuk mengelola koleksi tanaman. Program ini dirancang dengan menerapkan konsep Object-Oriented Programming (OOP) seperti Abstraksi dan Polimorfisme.
-
-## Penjelasan Penerapan OOP
+Program ini adalah aplikasi konsol Java sederhana untuk mengelola koleksi tanaman. Program ini dirancang dengan menerapkan konsep Object-Oriented Programming  seperti Abstraksi dan Polimorfisme.
 
 ### Abstraction
 Program ini menerapkan **Abstraksi** melalui penggunaan **Abstract Class**.
+
+<img width="780" height="343" alt="image" src="https://github.com/user-attachments/assets/8eba7260-686f-4de4-844c-8f7a7393a9b3" />
+<img width="610" height="77" alt="image" src="https://github.com/user-attachments/assets/fbba6a03-1626-4dd2-bfe5-f6b2a5b0da6b" />
+
 
 * **`abstract class TanamanModel`**: Kelas ini berfungsi sebagai fondasi untuk semua jenis tanaman. Kelas ini tidak dapat diinstansiasi secara langsung karena merepresentasikan konsep umum "tanaman".
     * Method `tampilkanInfo()` dideklarasikan sebagai `abstract`, yang memaksa semua kelas turunannya (`TanamanHias` dan `TanamanBuah`) untuk menyediakan implementasi spesifik dari method ini.
@@ -125,9 +127,16 @@ Program ini menerapkan **Abstraksi** melalui penggunaan **Abstract Class**.
 ### Polymorphism
 Polymorphism diterapkan dalam program ini melalui **Method Overloading** dan **Method Overriding**.
 
+<img width="1286" height="436" alt="image" src="https://github.com/user-attachments/assets/e6cd1a95-b1e9-4340-91a3-ab035c906a6e" />
+
 * **Overloading**: Ditemukan pada method `setUmur()` di dalam `abstract class TanamanModel`.
     * `setUmur(int umur)`: Digunakan untuk mengubah umur tanaman dengan input angka.
     * `setUmur(String umurStr)`: Digunakan untuk mengubah umur tanaman dengan input string. Method ini akan memproses input string dan mengonversinya menjadi angka secara aman.
+
+<img width="836" height="235" alt="image" src="https://github.com/user-attachments/assets/41bc0ae9-dda7-475e-a397-5ebe1a6632ba" />
+
+<img width="897" height="247" alt="image" src="https://github.com/user-attachments/assets/7d6957b8-734e-411d-9ae5-d0904f6d2faf" />
+
 
 * **Overriding**: Ditemukan pada dua kelas turunan dari `TanamanModel`.
     * **`tampilkanInfo()` di kelas `TanamanHias`**: Method ini meng-override `tampilkanInfo()` dari kelas induknya (`TanamanModel`). Implementasinya menambahkan detail spesifik tentang tanaman hias, yaitu `warnaBunga`.
